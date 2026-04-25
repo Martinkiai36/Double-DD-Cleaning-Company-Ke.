@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double DD Cleaning | Nairobi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:#f5f7fa;color:#222}
+
+/* NAV */
+nav{
+position:sticky;top:0;
+background:rgba(13,71,161,0.9);
+backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;
+padding:15px 6%;color:#fff;z-index:1000
+}
+nav a{color:#fff;text-decoration:none;margin:0 10px}
+
+/* HERO */
+.hero{
+height:95vh;
+background:url('https://images.unsplash.com/photo-1590650213165-c1fef80648c4') center/cover;
+display:flex;align-items:center;
+color:#fff;padding:0 6%;position:relative
+}
+.hero::after{
+content:"";position:absolute;inset:0;
+background:rgba(0,0,0,0.5)
+}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:55px}
+.btn{
+background:#1E88E5;color:#fff;
+padding:14px 25px;border-radius:6px;
+text-decoration:none;display:inline-block;margin-top:20px
+}
+
+/* SECTIONS */
+.section{padding:80px 6%}
+.section h2{margin-bottom:10px}
+.grid{display:grid;gap:25px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+.card{
+background:#fff;padding:20px;border-radius:12px;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s
+}
+.card:hover{transform:translateY(-6px)}
+.card img{width:100%;border-radius:10px}
+
+/* GALLERY */
+.gallery img{height:220px;object-fit:cover}
+
+/* PRICING */
+.price{
+font-size:28px;color:#1E88E5;font-weight:bold
+}
+
+/* CONTACT */
+.contact{background:#0D47A1;color:#fff}
+input,textarea{
+width:100%;padding:12px;margin:8px 0;
+border:none;border-radius:6px
+}
+button{
+background:#fff;color:#0D47A1;
+padding:14px;border:none;border-radius:6px;font-weight:bold
+}
+
+/* MAP */
+.map iframe{width:100%;height:300px;border:0;border-radius:10px}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;width:60px;height:60px;
+display:flex;align-items:center;justify-content:center;
+border-radius:50%;font-size:30px;color:#fff;text-decoration:none
+}
+
+/* ANIMATION */
+.fade{opacity:0;transform:translateY(30px);transition:1s}
+.fade.show{opacity:1;transform:translateY(0)}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<h2>Double DD Cleaning</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-content">
+<h1>Professional Cleaning Services in Nairobi</h1>
+<p>Homes, offices & deep cleaning done right.</p>
+<a href="#contact" class="btn">Book Now</a>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section fade" id="services">
+<h2>Our Services</h2>
+
+<div class="grid grid-3">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf">
+<h3>Home Cleaning</h3>
+<p>Complete home cleaning including kitchen, bathroom, and bedrooms.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<h3>Office Cleaning</h3>
+<p>Professional workspace cleaning to improve productivity.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<h3>Deep Cleaning</h3>
+<p>Detailed sanitation and fumigation services.</p>
+</div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section fade gallery">
+<h2>Before & After Results</h2>
+
+<div class="grid grid-3">
+<img src="https://images.unsplash.com/photo-1600566752227-8f3b5b3c7c9d">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1">
+</div>
+</section>
+
+<!-- PRICING -->
+<section class="section fade" id="pricing">
+<h2>Pricing</h2>
+
+<div class="grid grid-3">
+
+<div class="card">
+<h3>Basic Clean</h3>
+<p class="price">KES 3,000+</p>
+<p>Standard home cleaning</p>
+</div>
+
+<div class="card">
+<h3>Office Clean</h3>
+<p class="price">KES 5,000+</p>
+<p>Commercial spaces</p>
+</div>
+
+<div class="card">
+<h3>Deep Clean</h3>
+<p class="price">KES 8,000+</p>
+<p>Full deep cleaning & sanitization</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact fade" id="contact">
+<h2>Book Cleaning</h2>
+
+<form onsubmit="sendToWhatsApp(event)">
+<input type="text" id="name" placeholder="Name" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+<textarea id="msg" placeholder="Details"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+
+<div class="map" style="margin-top:30px">
+<iframe src="https://maps.google.com/maps?q=Nairobi&output=embed"></iframe>
+</div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/254729530385?text=Hello%20Double%20DD%20Cleaning%2C%20how%20can%20we%20help%3F" target="_blank">💬</a>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show')
+}
+})
+})
+
+function sendToWhatsApp(e){
+e.preventDefault();
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
+
+let url="https://wa.me/254729530385?text="
++"Hello Double DD Cleaning,%0A"
++"Name: "+name+"%0A"
++"Phone: "+phone+"%0A"
++"Request: "+msg;
+
+window.open(url,"_blank");
+}
+</script>
+
+</body>
+</html>
